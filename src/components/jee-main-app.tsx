@@ -40,8 +40,6 @@ import {
   getSubjectIcon,
   getChapterIcon,
   getTrendIcon,
-  StraightTrendUp,
-  StraightTrendDown,
 } from "@/components/icons";
 import Image from "next/image";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -103,7 +101,6 @@ export default function JEEMainApp() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const subjects = getSubjectsFromData();
-  const isMobile = useMediaQuery("(max-width: 768px)");
   const [windowWidth, setWindowWidth] = useState(0);
 
   const { activeSubject, filteredChapters, filters, sortDirection } =
