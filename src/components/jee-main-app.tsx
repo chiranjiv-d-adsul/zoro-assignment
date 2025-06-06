@@ -43,6 +43,11 @@ import {
 } from "@/components/icons";
 import Image from "next/image";
 
+
+interface Chapter {
+  yearWiseQuestionCount?: Record<string, number>;
+
+}
 // Extract unique subjects from data
 const getSubjectsFromData = () => {
   const uniqueSubjects = [
@@ -168,7 +173,7 @@ export default function JEEMainApp() {
     );
   }, [activeSubject, dispatch]);
 
-  const getQuestionCount = (chapter: any, year: string) => {
+  const getQuestionCount = (chapter: Chapter, year: string) => {
     return chapter.yearWiseQuestionCount &&
       chapter.yearWiseQuestionCount[year] !== undefined
       ? chapter.yearWiseQuestionCount[year]
