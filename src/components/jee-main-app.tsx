@@ -42,7 +42,6 @@ import {
   getTrendIcon,
 } from "@/components/icons";
 import Image from "next/image";
-import { useMediaQuery } from "@/hooks/use-media-query";
 
 // Extract unique subjects from data
 const getSubjectsFromData = () => {
