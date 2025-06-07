@@ -177,39 +177,11 @@ export const getChapterIcon = (chapterName: string) => {
 
 // Trend icons for comparing values
 export const StraightTrendUp = ({ size = 16, className = "" }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    className={className}
-  >
-    <path
-      d="M7 17L17 7M17 7H7M17 7V17"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
+  <ArrowUpIcon size={size} className={className} weight="bold" />
 );
 
 export const StraightTrendDown = ({ size = 16, className = "" }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    className={className}
-  >
-    <path
-      d="M17 7L7 17M7 17H17M7 17V7"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
+  <ArrowDownIcon size={size} className={className} weight="bold" />
 );
 
 export const getTrendIcon = (current: number, previous: number) => {
